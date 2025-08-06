@@ -1,0 +1,227 @@
+<?php 
+
+session_start();
+
+	if(!isset($_SESSION['userlogin'])){
+		header("Location: Login.php");
+	}
+
+	if(isset($_GET['logout'])){
+		session_destroy();
+		unset($_SESSION);
+		header("Location: Login.php");
+	}
+
+?>
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Poke Bowls, Fresh, Healthy and Tasty, to every bowl, Healthy and tasty, Healthy and tasty, on the Planet, our poke bowls, contacts">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.5.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Arizonia:400">
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logo.jpg"
+    }</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+
+    <style>
+      .footer-text {
+          text-align: right;
+          margin-left: 60%; /* Default for larger screens */
+      }
+
+      @media (max-width: 768px) {
+          .footer-text {
+              margin-left: 20%; /* Smaller margin for mobile devices */
+          }
+      }
+
+      @media (max-width: 480px) {
+          .footer-text {
+              margin-left: 10%; /* Even smaller margin for very small devices */
+              font-size: 0.8em; /* Optional: Reduce font size for small devices */
+          }
+      }
+    </style>
+
+  </head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-sticky u-sticky-ae50 u-header" id="sec-383c" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://www.facebook.com/profile.php?id=100084484321109" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+          <img src="images/logo.jpg" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-align-left u-font-size-14 u-menu u-menu-hamburger u-menu-open-right u-nav-spacing-25 u-offcanvas u-menu-1" data-responsive-from="XL">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
+            <a class="u-button-style u-custom-border u-custom-border-color u-custom-borders u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link" href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7b92"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-7b92" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
+                </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+              </svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home.html" style="padding: 10px;">Home</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="About.html" style="padding: 10px;">About</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px;">Contact</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Reservation.html" style="padding: 10px;">Reservation</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="logout.php" style="padding: 10px;">Logout</a></li>
+            </ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-55 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-text-hover-palette-4-dark-1 u-nav-2">
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Reservation.html">Reservation</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="logout.php">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-container-align-center u-image u-shading u-section-1" id="sec-0f12" data-image-width="1920" data-image-height="1081">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-default u-text-1">Kuya Pok's</h1>
+        <h2 class="u-align-center u-custom-font u-font-merriweather u-text u-text-default u-text-2">unlimited wings</h2>
+        <a href="https://www.facebook.com/profile.php?id=100084484321109" class="u-align-center u-border-none u-btn u-button-style u-palette-4-base u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="2000">view more</a>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-4-light-3 u-section-2" id="sec-0fbc">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+                  <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-2"></div>
+                  <h2 class="u-align-center u-text u-text-1"> Want the best wings of your life?</h2>
+                  <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-3"></div>
+                  <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-4"></div>
+                  <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-5"></div>
+                  <p class="u-align-center u-text u-text-2"> Different flavors of chicken with their respective seasonings and sauces; and the cold beers on different towers that you can chug on.&nbsp;</p>
+                  <a href="About.html" class="u-align-center-xs u-btn u-button-style u-btn-1">more about us</a>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="2048" data-image-height="1153" data-animation-name="customAnimationIn" data-animation-duration="2000"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-carousel u-slide u-block-5f46-1" id="carousel-94b9" data-interval="5000" data-u-ride="carousel">
+      <ol class="u-absolute-hcenter u-carousel-indicators u-block-5f46-2">
+        <li data-u-target="#carousel-94b9" class="u-active u-grey-30" data-u-slide-to="0"></li>
+        <li data-u-target="#carousel-94b9" class="u-grey-30" data-u-slide-to="1"></li>
+      </ol>
+      <div class="u-carousel-inner" role="listbox">
+        <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-section-3-1" data-image-width="1920" data-image-height="1081">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-align-center u-text u-text-default u-title u-text-1">MEMORIES</h1>
+            <p class="u-align-center u-large-text u-text u-text-variant u-text-2"> Events and memories can be formed through connections of people around the place.<a class="u-absolute-vcenter u-active-none u-border-none u-btn u-button-style u-carousel-control u-carousel-control-prev u-hover-none u-none u-text-palette-1-base u-text-1" href="#carousel_a76d" role="button" data-u-slide="prev"></a>
+            </p>
+            <a href="About.html" class="u-align-center u-btn u-button-style u-palette-2-base u-btn-2">Read More</a>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-shading u-section-3-2" data-image-width="1081" data-image-height="1920">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-align-center u-text u-text-default u-title u-text-1">DRINKS</h1>
+            <p class="u-align-center u-large-text u-text u-text-variant u-text-2"> Every indulging drink that you can think of in the night can be found only at this place.<a class="u-absolute-vcenter u-active-none u-border-none u-btn u-button-style u-carousel-control u-carousel-control-prev u-hover-none u-none u-text-palette-1-base u-text-1" href="#carousel_a76d" role="button" data-u-slide="prev"></a>
+            </p>
+            <a href="About.html" class="u-align-center u-btn u-button-style u-palette-2-base u-btn-2">Read More</a>
+          </div>
+        </div>
+      </div>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-5f46-3" href="#carousel-94b9" role="button" data-u-slide="prev">
+        <span aria-hidden="true">
+          <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+        </span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-5f46-4" href="#carousel-94b9" role="button" data-u-slide="next">
+        <span aria-hidden="true">
+          <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+        </span>
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
+    
+    <footer class="u-align-center u-clearfix u-footer u-gradient" id="sec-d0a0">
+      <section class="u-backlink u-clearfix u-grey-80">
+          <div class="u-clearfix u-sheet u-sheet-1">
+              <!-- Navigation Menu -->
+              <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+                  <!-- Desktop Menu Links -->
+                  <div class="u-custom-menu u-nav-container">
+                      <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+                          <li class="u-nav-item">
+                              <a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-4-base u-text-palette-2-base" href="Home.php" style="padding: 10px">Home</a>
+                          </li>
+                          <li class="u-nav-item">
+                              <a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-4-base u-text-palette-2-base" href="About.html" style="padding: 10px">About</a>
+                          </li>
+                          <li class="u-nav-item">
+                              <a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-4-base u-text-palette-2-base" href="Contact.html" style="padding: 10px">Contact</a>
+                          </li>
+                          <li class="u-nav-item">
+                              <a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-4-base u-text-palette-2-base" href="Reservation.html" style="padding: 10px">Reservation</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- Mobile Menu Links -->
+                  <div class="u-custom-menu u-nav-container-collapse">
+                      <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                          <div class="u-sidenav-overflow">
+                              <div class="u-menu-close"></div>
+                              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php">Home</a></li>
+                                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a></li>
+                                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a></li>
+                                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Reservation.html">Reservation</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+                  </div>
+              </nav>
+              <!-- Footer Text -->
+              <p class="u-align-right u-small-text u-text u-text-palette-2-base u-text-variant u-text-1" style="text-align: right; margin-left: 60%;">
+                  © 2024 Kuya Pok's Unlimited Wings<br>All rights reserved.
+              </p>
+          </div>
+      </section>
+    </footer>
+  </body>
+</html>
